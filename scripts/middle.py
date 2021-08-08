@@ -13,7 +13,9 @@ class Middle:
 		self.midpub = rospy.Publisher('T2',name,queue_size=10) 
 		
 	def callback(self,data):
+		print("CALL BACK START")
 		rospy.loginfo("%s is age: %d "%(data.firstname,data.age))
+		
 		self.midtalk(data) 
 	def midtalk(self,data): 
 		
